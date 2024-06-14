@@ -63,7 +63,7 @@ tg.MainButton.color = "#2cab37";
 				let buyButton = container.querySelector('.btn');
 				buyButton.style.display = 'inline';
 				
-				let allCouterValues = document.querySelectorAll('.counterValue');
+				let allCounterValues = document.querySelectorAll('.counterValue');
 				let totalItems = Array.from(allCounterValues)
 					.map(element => parseInt(element.textContent))
 					.reduce((total, value) => total + value, 0);
