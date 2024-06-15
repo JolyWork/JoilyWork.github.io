@@ -34,7 +34,7 @@ tg.MainButton.color = "#2cab37";
 				tg.MainButton.hide();
 			}
 			else {
-				tg.MainButton.setText(totalPriceFinal);
+				tg.MainButton.setText("Hello!");
 			}
         }
 
@@ -46,7 +46,7 @@ tg.MainButton.color = "#2cab37";
 			let priceElement = (button.parentNode).parentNode.querySelector('.price');
 			let price = parseFloat(priceElement.textContent);
 			totalPricePlus(counterValue,price);
-			tg.MainButton.setText(totalPriceFinal);
+			tg.MainButton.setText("Hello1");
         }
 		
         function decrement(button) {
