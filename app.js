@@ -35,6 +35,7 @@ tg.MainButton.color = "#2cab37";
 			}
 			else {
 				tg.MainButton.setText("Hello!");
+				tg.MainButton.show();
 			}
         }
 
