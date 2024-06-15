@@ -69,7 +69,7 @@ tg.MainButton.color = "#2cab37";
 					.map(element => parseInt(element.textContent))
 					.reduce((total, value) => total + value, 0);
 				if (totalItems === 0) {
-					tg.MainButton.setText("");
+					tg.MainButton.setText("0");
 					tg.MainButton.hide();
 				}
 			}
