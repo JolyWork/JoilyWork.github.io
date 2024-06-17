@@ -80,9 +80,6 @@ tg.MainButton.color = "#2cab37";
 				}
 			}
 			
-			let priceElement = (button.parentNode).parentNode.querySelector('.price');
-			let price = parseFloat(priceElement.textContent);
-			totalPriceMinus(counterValue, price);
         }
 		
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
