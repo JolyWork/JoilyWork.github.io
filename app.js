@@ -30,13 +30,11 @@ tg.MainButton.color = "#2cab37";
 			let value = parseInt(counterValueElement.textContent);
 			totalPricePlus(value, price);
 			
-			if (tg.MainButton.isVisible){
-				tg.MainButton.hide();
-			}
-			else {
-				tg.MainButton.setText("Hello!");
+			if (!(tg.MainButton.isVisible)){
+				tg.MainButton.setText(totalPriceFinal.toString());
 				tg.MainButton.show();
 			}
+			
         }
 
        function increment(button) {
