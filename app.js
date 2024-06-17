@@ -34,6 +34,9 @@ tg.MainButton.color = "#2cab37";
 				tg.MainButton.setText(totalPriceFinal.toString());
 				tg.MainButton.show();
 			}
+			else {
+				tg.MainButton.setText(totalPriceFinal.toString());
+			}
 			
         }
 
