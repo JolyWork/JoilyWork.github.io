@@ -48,30 +48,35 @@ tg.MainButton.color = "#2cab37";
 			let priceElement = (button.parentNode).parentNode.querySelector('.price');
 			let price = parseFloat(priceElement.textContent);
 			totalPricePlus(counterValue,price);
-			tg.MainButton.setText("Hello1");
+			tg.MainButton.setText(totalPriceFinal.toString());
         }
 		
         function decrement(button) {
             let counterValueElement = button.nextElementSibling;
             let counterValue = parseInt(counterValueElement.textContent);
             if (counterValue > 0) {
-                counterValue--;
-                counterValueElement.textContent = counterValue;
+                	counterValue--;
+                	counterValueElement.textContent = counterValue;
+			let priceElement = (button.parentNode).parentNode.querySelector('.price');
+			let price = parseFloat(priceElement.textContent);
+			totalPriceMinus(counterValue, price);
+		    	tg.MainButton.setText(totalPriceFinal.toString());
             }
 			
-			if (counterValue === 0) {
-				button.parentElement.style.display = 'none';
-				let container = button.parentElement.parentElement;
-				let buyButton = container.querySelector('.btn');
-				buyButton.style.display = 'inline';
+	    if (counterValue === 0) {
+			button.parentElement.style.display = 'none';
+			let container = button.parentElement.parentElement;
+			let buyButton = container.querySelector('.btn');
+			buyButton.style.display = 'inline';
 				
-				let allCounterValues = document.querySelectorAll('.counterValue');
-				let totalItems = Array.from(allCounterValues)
-					.map(element => parseInt(element.textContent))
-					.reduce((total, value) => total + value, 0);
-				if (totalItems === 0) {
-					tg.MainButton.setText("0");
-					tg.MainButton.hide();
+			let allCounterValues = document.querySelectorAll('.counterValue');
+			let totalItems = Array.from(allCounterValues)
+				.map(element => parseInt(element.textContent))
+				.reduce((total, value) => total + value, 0);
+		    
+			if (totalItems === 0) {
+				tg.MainButton.setText("0");
+				tg.MainButton.hide();
 				}
 			}
 			
