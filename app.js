@@ -83,7 +83,7 @@ tg.MainButton.color = "#2cab37";
         }
 		
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
-	tg.sendData(totalPriceFinal);
+	tg.sendData(totalPriceFinal.toString());
 });
 		
 		
